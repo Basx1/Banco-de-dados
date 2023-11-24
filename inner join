@@ -1,0 +1,50 @@
+SELECT 
+    PV.pedidovendaID,
+    C.nome AS nome_cliente,
+    V.nome AS nome_vendedor,
+    SP.STTS_PAG AS situacao_pedido,
+    FP.forma_pag AS forma_pagamento
+FROM 
+    PEDIDO_VENDA PV
+INNER JOIN 
+    CLIENTE C ON PV.cod_cliente = C.clienteID
+INNER JOIN 
+    vendedor V ON PV.vendedorID = V.vendedorID
+INNER JOIN 
+    SITUACAO_PEDIDO SP ON PV.cod_situacaoped = SP.situacaopID
+INNER JOIN 
+    FORMA_PAGAMENTO FP ON PV.cod_forma_pagamento = FP.formaPAGID;
+
+SELECT 
+    IPV.itempedidovendaID,
+    PV.pedidovendaID,
+    P.nome AS nome_produto,
+    IPV.qtd_item_pedido
+FROM 
+    ITEM_PEDIDOVENDA IPV
+INNER JOIN 
+    PEDIDO_VENDA PV ON IPV.pedidovendaID = PV.pedidovendaID
+INNER JOIN 
+    PRODUTO P ON IPV.cod_produto = P.cod_PRODUTO;
+
+   
+   SELECT 
+    PC.cod_PEDIDOCOMPRA,
+    F.nome AS nome_fornecedor,
+    PC.VLR_PEDIDO_COMPRA
+FROM 
+    PEDIDO_COMPRA PC
+INNER JOIN 
+    FORNECEDOR F ON PC.cod_FORNECEDOR = F.cod_fornecedor;
+
+   SELECT 
+    C.cod_COTACAO,
+    P.nome AS nome_produto,
+    F.nome AS nome_fornecedor,
+    C.vlr_pedidoC
+FROM 
+    COTAÇÃO C
+INNER JOIN 
+    PRODUTO P ON C.cod_produto = P.cod_PRODUTO
+INNER JOIN 
+    FORNECEDOR F ON C.cod_fornecedor = F.cod_fornecedor;
