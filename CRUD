@@ -1,0 +1,66 @@
+-- Inserts para CLIENTE table com nomes brasileiros
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('111-1111', 'Rua das Flores, 123', 'Enzo');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('222-2222', 'Avenida dos Anjos, 456', 'Sophia');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('333-3333', 'Rua dos Amigos, 789', 'Miguel');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('444-4444', 'Avenida da Paz, 012', 'Isabella');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('555-5555', 'Rua do Comércio, 789', 'Pedro');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('666-6666', 'Avenida da Prosperidade, 012', 'Larissa');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('777-7777', 'Rua das Estrelas, 345', 'Lucas');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('888-8888', 'Avenida da Alegria, 678', 'Julia');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('999-9999', 'Rua do Sol, 901', 'Gabriel');
+INSERT INTO CLIENTE (telefone, endereço, nome) VALUES ('101-1010', 'Avenida da Lua, 234', 'Valentina');
+
+
+
+
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('303-0303', 'Rua das Vendas, 111', 'Fernanda Oliveira');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('404-0404', 'Avenida das Negociações, 222', 'Ricardo Santos');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('505-0505', 'Rua do Comércio, 333', 'Carolina Pereira');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('606-0606', 'Avenida do Empreendedor, 444', 'Renato Silva');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('707-0707', 'Rua das Oportunidades, 555', 'Fernando Costa');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('808-0808', 'Avenida das Vendas, 666', 'Amanda Almeida');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('909-0909', 'Rua dos Clientes, 777', 'Roberto Oliveira');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('101-0101', 'Avenida do Sucesso, 888', 'Patricia Lima');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('111-1111', 'Rua do Progresso, 999', 'Gustavo Martins');
+INSERT INTO vendedor (telefone, endereco, nome) VALUES ('121-2121', 'Avenida da Prosperidade, 1010', 'Camila Rodrigues');
+-- Repita mais dez vezes para completar a lista
+
+-- Inserts for FORMA_PAGAMENTO table
+INSERT INTO FORMA_PAGAMENTO VALUES (1, 'Cartão Visa');
+INSERT INTO FORMA_PAGAMENTO VALUES (2, 'Boleto Bancário');
+-- ... Add more FORMA_PAGAMENTO inserts as needed
+
+-- Inserts for PRODUTO table
+INSERT INTO PRODUTO VALUES (9, 'T1', 'Smartphone X', '800.00', '1000.00');
+INSERT INTO PRODUTO VALUES (10, 'T2', 'Mesa de Jantar Y', '200.00', '250.00');
+INSERT INTO PRODUTO VALUES (11, 3, 'Smartphone X', '500.00', '800.00');
+-- ... Add more PRODUTO inserts as needed
+
+-- Inserts for TIPO_PRODUTO table
+INSERT INTO TIPO_PRODUTO VALUES (13, 'Eletrônicos');
+INSERT INTO TIPO_PRODUTO VALUES (14, 'Móveis');
+INSERT INTO TIPO_PRODUTO VALUES(17, 'CELULARES');
+INSERT INTO TIPO_PRODUTO VALUES(18, 'ELETRODOMESTICOS');
+
+
+-- Inserts for FORNECEDOR table
+INSERT INTO FORNECEDOR VALUES (19, '555-5555', 'Distribuidora ABC', 'Rua dos Fornecedores, 789', 'contato@abc.com');
+INSERT INTO FORNECEDOR VALUES (20, '666-6666', 'Fábrica XYZ', 'Avenida da Indústria, 012', 'contato@xyz.com');
+INSERT INTO PRODUTO VALUES (5, 18, 'smartphone ARAMUNI-Z PRO', '1200.00', '1800.00');
+INSERT INTO PRODUTO VALUES (4, 4, 'MICROONDAS', '7200.00', '9000.00');
+
+
+-- Inserts for SITUACAO_PEDIDO table
+INSERT INTO SITUACAO_PEDIDO VALUES (1, 'Aguardando Pagamento');
+INSERT INTO SITUACAO_PEDIDO VALUES (2, 'Em Processamento');
+
+
+DELETE * produto
+delete * cliente
+DELETE FROM CLIENTE WHERE clienteID%2
+
+
+SELECT * FROM CLIENTE
+SELECT * FROM VENDEDOR
+SELECT * FROM FORNECEDOR
+SELECT * FROM PRODUTO
